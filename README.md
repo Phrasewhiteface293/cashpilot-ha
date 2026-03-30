@@ -3,7 +3,7 @@
 [![HACS](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
 [![GitHub Release](https://img.shields.io/github/v/release/GeiserX/cashpilot-ha)](https://github.com/GeiserX/cashpilot-ha/releases)
 [![GitHub Stars](https://img.shields.io/github/stars/GeiserX/cashpilot-ha)](https://github.com/GeiserX/cashpilot-ha)
-[![License: MIT](https://img.shields.io/github/license/GeiserX/cashpilot-ha)](LICENSE)
+[![License: GPL-3.0](https://img.shields.io/github/license/GeiserX/cashpilot-ha)](LICENSE)
 
 A Home Assistant custom integration that monitors your [CashPilot](https://github.com/GeiserX/CashPilot) passive income dashboard. Track earnings, service health, and manage containers directly from HA.
 
@@ -142,4 +142,4 @@ Data is refreshed every **5 minutes** by default. This is not user-configurable 
 
 ## License
 
-[MIT](LICENSE)
+[GPL-3.0](LICENSE)
