@@ -1,7 +1,4 @@
 {
   "name": "CashPilot",
-  "domains": ["sensor", "binary_sensor", "switch", "button"],
-  "iot_class": "local_polling",
-  "homeassistant": "2024.1.0",
-  "render_readme": true
+  "homeassistant": "2024.1.0"
 }
