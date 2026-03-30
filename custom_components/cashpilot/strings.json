@@ -1,0 +1,83 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to CashPilot",
+        "description": "Enter the URL, username, and password for your CashPilot instance.",
+        "data": {
+          "url": "URL",
+          "username": "Username",
+          "password": "Password"
+        },
+        "data_description": {
+          "url": "The base URL of your CashPilot instance (e.g., http://cashpilot:8080).",
+          "username": "Your CashPilot login username.",
+          "password": "Your CashPilot login password."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to CashPilot. Check the URL and ensure the server is reachable.",
+      "invalid_auth": "Invalid username or password.",
+      "unknown": "An unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "This CashPilot instance is already configured."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "total_earnings": {
+        "name": "Total earnings"
+      },
+      "today_earnings": {
+        "name": "Today earnings"
+      },
+      "month_earnings": {
+        "name": "Month earnings"
+      },
+      "active_services": {
+        "name": "Active services"
+      },
+      "fleet_workers_online": {
+        "name": "Fleet workers online"
+      },
+      "fleet_containers_running": {
+        "name": "Fleet containers running"
+      },
+      "service_balance": {
+        "name": "{service_name} balance"
+      },
+      "service_health_score": {
+        "name": "{service_name} health score"
+      },
+      "service_uptime": {
+        "name": "{service_name} uptime"
+      },
+      "service_cpu": {
+        "name": "{service_name} CPU"
+      },
+      "service_memory": {
+        "name": "{service_name} memory"
+      }
+    },
+    "binary_sensor": {
+      "service_running": {
+        "name": "{service_name} running"
+      }
+    },
+    "switch": {
+      "service_switch": {
+        "name": "{service_name}"
+      }
+    },
+    "button": {
+      "collect_earnings": {
+        "name": "Collect earnings"
+      },
+      "service_restart": {
+        "name": "{service_name} restart"
+      }
+    }
+  }
+}
