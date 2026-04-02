@@ -140,6 +140,12 @@ Data is refreshed every **5 minutes** by default. This is not user-configurable 
 - [CashPilot](https://github.com/GeiserX/CashPilot) -- the self-hosted passive income platform this integration connects to
 - [Issue Tracker](https://github.com/GeiserX/cashpilot-ha/issues) -- report bugs or request features
 
+## Other Home Assistant Integrations by GeiserX
+
+- [duplicacy-ha](https://github.com/GeiserX/duplicacy-ha) — Backup status monitoring
+- [genieacs-ha](https://github.com/GeiserX/genieacs-ha) — TR-069 router management sensors
+- [pumperly-ha](https://github.com/GeiserX/pumperly-ha) — Fuel and EV charging price sensors
+
 ## License
 
 [GPL-3.0](LICENSE)
