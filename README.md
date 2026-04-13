@@ -152,6 +152,16 @@ Data is refreshed every **5 minutes** by default. This is not user-configurable 
 - [genieacs-ha](https://github.com/GeiserX/genieacs-ha) — TR-069 router management sensors
 - [pumperly-ha](https://github.com/GeiserX/pumperly-ha) — Fuel and EV charging price sensors
 
+
+## Related Projects
+
+| Project | Description |
+|---------|-------------|
+| [CashPilot](https://github.com/GeiserX/CashPilot) | Self-hosted passive income platform with web UI for setup and earnings tracking |
+| [CashPilot-android](https://github.com/GeiserX/CashPilot-android) | Android monitoring agent for CashPilot passive income apps |
+| [cashpilot-mcp](https://github.com/GeiserX/cashpilot-mcp) | MCP Server for CashPilot passive income monitoring and fleet management |
+| [n8n-nodes-cashpilot](https://github.com/GeiserX/n8n-nodes-cashpilot) | n8n community node for CashPilot passive income monitoring |
+
 ## License
 
 [GPL-3.0](LICENSE)
