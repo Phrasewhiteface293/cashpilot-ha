@@ -1,0 +1,7 @@
+description: "Home Assistant custom integration for CashPilot — track earnings, monitor service health, and control containers from HA."
+personalNote: "I run Home Assistant for everything at home, so it felt natural to bring passive income monitoring into the same dashboard. Now I get push notifications when a service goes down and can auto-restart unhealthy containers from an automation."
+keyFeatures:
+  - "Sensors for total, daily, and monthly earnings plus per-service health scores"
+  - "Switches and buttons to start, stop, and restart individual services"
+  - "Fleet overview with online workers and running containers"
+techStack: "Python, Home Assistant, HACS, aiohttp"
